@@ -1,3 +1,5 @@
 # 2D_Platform_game
-Skillshare tutorial project
-update
+Skillshare Unity tutorial project.
+
+
+
