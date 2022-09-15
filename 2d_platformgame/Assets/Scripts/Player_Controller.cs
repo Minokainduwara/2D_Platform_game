@@ -8,6 +8,8 @@ public class Player_Controller : MonoBehaviour
     private Animator _playerAnime;
     public float speed;
     public float x_axis_Velocity;
+
+    bool onground;
     
 
     void Start()
@@ -32,5 +34,7 @@ public class Player_Controller : MonoBehaviour
         {
             transform.localScale = new Vector3(x_axis_Velocity, 1, 1);
         }
+
+        _playerAnime.SetFloat("Velocity", Mathf.Abs(_playerRb.velocity.x));
     }
 }

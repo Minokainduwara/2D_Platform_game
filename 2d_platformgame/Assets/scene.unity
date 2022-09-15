@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 21736796}
   - component: {fileID: 21736795}
   - component: {fileID: 21736798}
+  - component: {fileID: 21736799}
   m_Layer: 0
   m_Name: Default Platform
   m_TagString: Untagged
@@ -238,6 +239,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.17551732}
   m_EdgeRadius: 0
+--- !u!114 &21736799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21736794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eadfed1e420b0449e3c6824a325fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+--- !u!1 &64940659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 64940660}
+  m_Layer: 0
+  m_Name: Game_End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &64940660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64940659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 11.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &72666119
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +293,7 @@ GameObject:
   - component: {fileID: 72666120}
   - component: {fileID: 72666121}
   - component: {fileID: 72666122}
+  - component: {fileID: 72666123}
   m_Layer: 0
   m_Name: Chain_Spike
   m_TagString: Untagged
@@ -381,6 +426,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entryPoint: {fileID: 2070060125}
   existpoint: {fileID: 221922615}
+--- !u!114 &72666123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72666119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eadfed1e420b0449e3c6824a325fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &221922614
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +572,7 @@ GameObject:
   - component: {fileID: 290500403}
   - component: {fileID: 290500402}
   - component: {fileID: 290500401}
+  - component: {fileID: 290500404}
   m_Layer: 0
   m_Name: Spikes (5)
   m_TagString: Untagged
@@ -635,6 +694,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!66 &290500404
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290500399}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 290500402}
+    m_ColliderPaths:
+    - - X: -3125000
+        Y: 1249999
+      - X: -5000000
+        Y: -1250000
+      - X: -4999999
+        Y: -10000000
+      - X: 5000000
+        Y: -9999999
+      - X: 5000000
+        Y: -3749999
+      - X: 3125000
+        Y: 1250000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.5, y: -0.99999994}
+      - {x: 0.5, y: -0.3749999}
+      - {x: 0.3125, y: 0.125}
+      - {x: -0.3125, y: 0.1249999}
+      - {x: -0.5, y: -0.125}
+      - {x: -0.4999999, y: -1}
+  m_VertexDistance: 0.0005
 --- !u!1 &368736281
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +747,7 @@ GameObject:
   - component: {fileID: 368736285}
   - component: {fileID: 368736284}
   - component: {fileID: 368736283}
+  - component: {fileID: 368736286}
   m_Layer: 0
   m_Name: Spikes (8)
   m_TagString: Untagged
@@ -768,6 +869,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!66 &368736286
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368736281}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 368736284}
+    m_ColliderPaths:
+    - - X: -3125000
+        Y: 1249999
+      - X: -5000000
+        Y: -1250000
+      - X: -4999999
+        Y: -10000000
+      - X: 5000000
+        Y: -9999999
+      - X: 5000000
+        Y: -3749999
+      - X: 3125000
+        Y: 1250000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.5, y: -0.99999994}
+      - {x: 0.5, y: -0.3749999}
+      - {x: 0.3125, y: 0.125}
+      - {x: -0.3125, y: 0.1249999}
+      - {x: -0.5, y: -0.125}
+      - {x: -0.4999999, y: -1}
+  m_VertexDistance: 0.0005
 --- !u!1 &860174933
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,6 +922,7 @@ GameObject:
   - component: {fileID: 860174937}
   - component: {fileID: 860174936}
   - component: {fileID: 860174935}
+  - component: {fileID: 860174938}
   m_Layer: 0
   m_Name: Spikes (4)
   m_TagString: Untagged
@@ -901,6 +1044,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!66 &860174938
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860174933}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 860174936}
+    m_ColliderPaths:
+    - - X: -3125000
+        Y: 1249999
+      - X: -5000000
+        Y: -1250000
+      - X: -4999999
+        Y: -10000000
+      - X: 5000000
+        Y: -9999999
+      - X: 5000000
+        Y: -3749999
+      - X: 3125000
+        Y: 1250000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.5, y: -0.99999994}
+      - {x: 0.5, y: -0.3749999}
+      - {x: 0.3125, y: 0.125}
+      - {x: -0.3125, y: 0.1249999}
+      - {x: -0.5, y: -0.125}
+      - {x: -0.4999999, y: -1}
+  m_VertexDistance: 0.0005
 --- !u!1 &1026461180
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +1097,7 @@ GameObject:
   - component: {fileID: 1026461184}
   - component: {fileID: 1026461183}
   - component: {fileID: 1026461182}
+  - component: {fileID: 1026461185}
   m_Layer: 0
   m_Name: Spikes (10)
   m_TagString: Untagged
@@ -1034,6 +1219,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!66 &1026461185
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026461180}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1026461183}
+    m_ColliderPaths:
+    - - X: -3125000
+        Y: 1249999
+      - X: -5000000
+        Y: -1250000
+      - X: -4999999
+        Y: -10000000
+      - X: 5000000
+        Y: -9999999
+      - X: 5000000
+        Y: -3749999
+      - X: 3125000
+        Y: 1250000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.5, y: -0.99999994}
+      - {x: 0.5, y: -0.3749999}
+      - {x: 0.3125, y: 0.125}
+      - {x: -0.3125, y: 0.1249999}
+      - {x: -0.5, y: -0.125}
+      - {x: -0.4999999, y: -1}
+  m_VertexDistance: 0.0005
 --- !u!1 &1041584703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,6 +1272,7 @@ GameObject:
   - component: {fileID: 1041584707}
   - component: {fileID: 1041584706}
   - component: {fileID: 1041584705}
+  - component: {fileID: 1041584708}
   m_Layer: 0
   m_Name: Spikes (1)
   m_TagString: Untagged
@@ -1167,6 +1394,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!66 &1041584708
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041584703}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1041584706}
+    m_ColliderPaths:
+    - - X: -3125000
+        Y: 1249999
+      - X: -5000000
+        Y: -1250000
+      - X: -4999999
+        Y: -10000000
+      - X: 5000000
+        Y: -9999999
+      - X: 5000000
+        Y: -3749999
+      - X: 3125000
+        Y: 1250000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.5, y: -0.99999994}
+      - {x: 0.5, y: -0.3749999}
+      - {x: 0.3125, y: 0.125}
+      - {x: -0.3125, y: 0.1249999}
+      - {x: -0.5, y: -0.125}
+      - {x: -0.4999999, y: -1}
+  m_VertexDistance: 0.0005
 --- !u!1 &1147206831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,7 +1514,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1392278642}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1332,6 +1601,7 @@ GameObject:
   - component: {fileID: 1170754005}
   - component: {fileID: 1170754004}
   - component: {fileID: 1170754003}
+  - component: {fileID: 1170754006}
   m_Layer: 0
   m_Name: Spikes (2)
   m_TagString: Untagged
@@ -1453,6 +1723,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!66 &1170754006
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170754001}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1170754004}
+    m_ColliderPaths:
+    - - X: -3125000
+        Y: 1249999
+      - X: -5000000
+        Y: -1250000
+      - X: -4999999
+        Y: -10000000
+      - X: 5000000
+        Y: -9999999
+      - X: 5000000
+        Y: -3749999
+      - X: 3125000
+        Y: 1250000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.5, y: -0.99999994}
+      - {x: 0.5, y: -0.3749999}
+      - {x: 0.3125, y: 0.125}
+      - {x: -0.3125, y: 0.1249999}
+      - {x: -0.5, y: -0.125}
+      - {x: -0.4999999, y: -1}
+  m_VertexDistance: 0.0005
 --- !u!1 &1321644663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1860,7 @@ GameObject:
   - component: {fileID: 1348450884}
   - component: {fileID: 1348450886}
   - component: {fileID: 1348450885}
+  - component: {fileID: 1348450887}
   m_Layer: 0
   m_Name: Rotating Platform
   m_TagString: Untagged
@@ -1708,6 +2020,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1348450887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348450880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eadfed1e420b0449e3c6824a325fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1352965862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +2045,7 @@ GameObject:
   - component: {fileID: 1352965866}
   - component: {fileID: 1352965865}
   - component: {fileID: 1352965864}
+  - component: {fileID: 1352965867}
   m_Layer: 0
   m_Name: Spikes (7)
   m_TagString: Untagged
@@ -1841,6 +2167,77 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!66 &1352965867
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352965862}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1352965865}
+    m_ColliderPaths:
+    - - X: -3125000
+        Y: 1249999
+      - X: -5000000
+        Y: -1250000
+      - X: -4999999
+        Y: -10000000
+      - X: 5000000
+        Y: -9999999
+      - X: 5000000
+        Y: -3749999
+      - X: 3125000
+        Y: 1250000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.5, y: -0.99999994}
+      - {x: 0.5, y: -0.3749999}
+      - {x: 0.3125, y: 0.125}
+      - {x: -0.3125, y: 0.1249999}
+      - {x: -0.5, y: -0.125}
+      - {x: -0.4999999, y: -1}
+  m_VertexDistance: 0.0005
+--- !u!1 &1392278641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1392278642}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1392278642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392278641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1147206833}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1408216094
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,6 +2356,7 @@ GameObject:
   - component: {fileID: 1465370025}
   - component: {fileID: 1465370027}
   - component: {fileID: 1465370026}
+  - component: {fileID: 1465370028}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -2080,6 +2478,47 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: -0.1875}
       - {x: 0.3125, y: 0.0625}
+--- !u!66 &1465370028
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465370023}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1465370027}
+    m_ColliderPaths:
+    - - X: -3125000
+        Y: 1249999
+      - X: -5000000
+        Y: -1250000
+      - X: -4999999
+        Y: -10000000
+      - X: 5000000
+        Y: -9999999
+      - X: 5000000
+        Y: -3749999
+      - X: 3125000
+        Y: 1250000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.5, y: -0.99999994}
+      - {x: 0.5, y: -0.3749999}
+      - {x: 0.3125, y: 0.125}
+      - {x: -0.3125, y: 0.1249999}
+      - {x: -0.5, y: -0.125}
+      - {x: -0.4999999, y: -1}
+  m_VertexDistance: 0.0005
 --- !u!1 &1486678126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,6 +2531,7 @@ GameObject:
   - component: {fileID: 1486678130}
   - component: {fileID: 1486678129}
   - component: {fileID: 1486678128}
+  - component: {fileID: 1486678131}
   m_Layer: 0
   m_Name: Spikes (6)
   m_TagString: Untagged
@@ -2213,6 +2653,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!66 &1486678131
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486678126}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1486678129}
+    m_ColliderPaths:
+    - - X: -3125000
+        Y: 1249999
+      - X: -5000000
+        Y: -1250000
+      - X: -4999999
+        Y: -10000000
+      - X: 5000000
+        Y: -9999999
+      - X: 5000000
+        Y: -3749999
+      - X: 3125000
+        Y: 1250000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.5, y: -0.99999994}
+      - {x: 0.5, y: -0.3749999}
+      - {x: 0.3125, y: 0.125}
+      - {x: -0.3125, y: 0.1249999}
+      - {x: -0.5, y: -0.125}
+      - {x: -0.4999999, y: -1}
+  m_VertexDistance: 0.0005
 --- !u!1 &1521715095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2748,7 @@ GameObject:
   - component: {fileID: 1590840648}
   - component: {fileID: 1590840651}
   - component: {fileID: 1590840652}
+  - component: {fileID: 1590840653}
   m_Layer: 0
   m_Name: Fan
   m_TagString: Untagged
@@ -2393,6 +2875,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 730e5bfd673d0d5498a0ca43728a1dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1590840653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590840647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eadfed1e420b0449e3c6824a325fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &2015807625
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,6 +2900,7 @@ GameObject:
   - component: {fileID: 2015807629}
   - component: {fileID: 2015807628}
   - component: {fileID: 2015807627}
+  - component: {fileID: 2015807630}
   m_Layer: 0
   m_Name: Spikes (3)
   m_TagString: Untagged
@@ -2526,6 +3022,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!66 &2015807630
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015807625}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 2015807628}
+    m_ColliderPaths:
+    - - X: -3125000
+        Y: 1249999
+      - X: -5000000
+        Y: -1250000
+      - X: -4999999
+        Y: -10000000
+      - X: 5000000
+        Y: -9999999
+      - X: 5000000
+        Y: -3749999
+      - X: 3125000
+        Y: 1250000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.5, y: -0.99999994}
+      - {x: 0.5, y: -0.3749999}
+      - {x: 0.3125, y: 0.125}
+      - {x: -0.3125, y: 0.1249999}
+      - {x: -0.5, y: -0.125}
+      - {x: -0.4999999, y: -1}
+  m_VertexDistance: 0.0005
 --- !u!1 &2070060122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,6 +3176,7 @@ GameObject:
   - component: {fileID: 2073976811}
   - component: {fileID: 2073976810}
   - component: {fileID: 2073976809}
+  - component: {fileID: 2073976812}
   m_Layer: 0
   m_Name: Spikes (9)
   m_TagString: Untagged
@@ -2760,3 +3298,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!66 &2073976812
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073976807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 2073976810}
+    m_ColliderPaths:
+    - - X: -3125000
+        Y: 1249999
+      - X: -5000000
+        Y: -1250000
+      - X: -4999999
+        Y: -10000000
+      - X: 5000000
+        Y: -9999999
+      - X: 5000000
+        Y: -3749999
+      - X: 3125000
+        Y: 1250000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.5, y: -0.99999994}
+      - {x: 0.5, y: -0.3749999}
+      - {x: 0.3125, y: 0.125}
+      - {x: -0.3125, y: 0.1249999}
+      - {x: -0.5, y: -0.125}
+      - {x: -0.4999999, y: -1}
+  m_VertexDistance: 0.0005
